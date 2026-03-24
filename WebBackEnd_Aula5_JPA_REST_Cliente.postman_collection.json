@@ -1,0 +1,236 @@
+{
+  "info": {
+    "_postman_id": "35bc1f7f-0751-4498-9158-a5f6f7078f9f",
+    "name": "WebBackEnd_Aula5_JPA_REST_Cliente",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45223622"
+  },
+  "item": [
+    {
+      "name": "cadastrarCliente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Teste teste\",\r\n    \"email\": \"teste@gmail.com\",\r\n    \"telefone\": \"+55 15 12345-6789\",\r\n    \"cpf\": \"123.456.789\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listarTodosClientes",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "porIdCliente",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "removerCliente",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "buscarPorNome",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente/buscarPorNome?nome=Teste teste",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente",
+            "buscarPorNome"
+          ],
+          "query": [
+            {
+              "key": "nome",
+              "value": "Teste teste"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "buscarPorEmail",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente/buscarPorEmail?email=teste@gmail.com",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente",
+            "buscarPorEmail"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "teste@gmail.com"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "buscarPorNomeInicio",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/aula5_jpa_rest_cliente/cliente/buscarNomeInicio?nome=T",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "aula5_jpa_rest_cliente",
+            "cliente",
+            "buscarNomeInicio"
+          ],
+          "query": [
+            {
+              "key": "nome",
+              "value": "T"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
